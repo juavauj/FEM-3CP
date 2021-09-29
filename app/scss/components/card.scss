@@ -1,0 +1,60 @@
+@use '../util/' as *;
+
+.card {
+  padding: rem(45) rem(41.6) rem(45) rem(45);
+
+  &:first-child {
+      border-radius: rem(8) rem(8) 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 rem(8) rem(8);
+  }
+
+  &--orange {
+    background-color: var(--bright-orange);
+  }
+
+  &--blue {
+    background-color: var(--dark-cyan);
+  }
+
+  &--green {
+    background-color: var(--very-dark-cyan);
+  }
+
+  &__logo {
+    margin-bottom: rem(40);
+  }
+
+  &__title {
+  }
+
+  &__text {
+      &--green {
+          padding-right: rem(18);
+      }
+  }
+
+  &__btn {
+    border: none;
+    background-color: var(--very-light-gray);
+    font-family: inherit;
+    font-size: rem(15);
+    padding: rem(16) rem(32);
+    cursor: pointer;
+    border-radius: rem(40);
+
+    &--orange {
+        color: var(--bright-orange);
+    }
+
+    &--blue {
+        color: var(--dark-cyan);
+    }
+
+    &--green {
+        color: var(--very-dark-cyan);
+    }
+  }
+}
