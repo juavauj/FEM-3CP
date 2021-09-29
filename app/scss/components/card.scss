@@ -1,0 +1,88 @@
+@use '../util/' as *;
+
+.card {
+  padding: rem(45) rem(41.6) rem(45) rem(45);
+
+  @include breakpoint(large) {
+    padding: rem(45) rem(54.4) rem(45) rem(45);
+    max-width: rem(307);
+  }
+
+  &:first-child {
+      border-radius: rem(8) rem(8) 0 0;
+
+      @include breakpoint(large) {
+        border-radius: rem(8) 0 0 rem(8);
+      }
+  }
+
+  &:last-child {
+    border-radius: 0 0 rem(8) rem(8);
+
+    @include breakpoint(large) {
+        border-radius: 0 rem(8) rem(8) 0;
+      }
+  }
+
+  &--orange {
+    background-color: var(--bright-orange);
+  }
+
+  &--blue {
+    background-color: var(--dark-cyan);
+  }
+
+  &--green {
+    background-color: var(--very-dark-cyan);
+
+    @include breakpoint(large) {
+        padding: rem(45) rem(52.8) rem(45) rem(45);
+    }
+  }
+
+  &__logo {
+    margin-bottom: rem(40);
+  }
+
+  &__title {
+  }
+
+  &__text {
+      &--green {
+          padding-right: rem(18);
+
+          @include breakpoint(large) {
+            padding-right: 0;
+          }
+      }
+  }
+
+  &__btn {
+    border: none;
+    background-color: var(--very-light-gray);
+    font-family: inherit;
+    font-size: rem(15);
+    padding: rem(16) rem(32);
+    cursor: pointer;
+    border-radius: rem(40);
+
+    &--orange {
+        color: var(--bright-orange);
+    }
+
+    &--blue {
+        color: var(--dark-cyan);
+    }
+
+    &--green {
+        color: var(--very-dark-cyan);
+    }
+
+    &:hover {
+        background-color: transparent;
+        color: var(--very-light-gray);
+        border: rem(2) solid var(--very-light-gray);
+        padding: rem(14) rem(32);
+    }
+  }
+}
